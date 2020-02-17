@@ -1,0 +1,99 @@
+/* 组件  */
+
+// 头部
+.header{
+    width: 100%;
+    height: 320px;
+    background: url("./img/header.png") no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    // 小图标
+    .head_icon{
+        $p: 6px;
+        $w: 152px;
+        padding: $p;;
+        width: $w;
+        height: $w;
+        background-color: rgba($color: #fff, $alpha: .5);
+        border-radius: 50%;
+        overflow: hidden;
+        img{
+            border-radius: 50%;
+        }
+    }
+    // 文字
+    .head_userName{
+        padding-top: 33px;
+        font-size: 32px;
+    }
+}
+
+$padding-left: 30px !default;
+// 内容
+.content{
+    padding-bottom: 102px;
+    // 项目
+    .items{
+        background-color: #fff;
+        margin-bottom: 20px;
+        padding-left: $padding-left;
+    }
+    $h: 90px;
+    // 每个单独列表
+    .items_list{
+        display: flex;
+        border-bottom: 1px solid #e9e9e9;
+        height: $h;
+        align-items: center;
+        .items_pic{
+            $w: 30px;
+            width: $w;
+            height: $w;
+        }
+        .items_text{
+            flex: 1;
+            @include textOverflow;
+            font-size: 28px;
+            color: $font-base-color;
+            padding-left: 20px;
+        }
+        .arrow{
+            font-size: 28px;
+            color: $font-tint-color; 
+            padding-right: 34px;
+        }
+        // 最后个取消边框
+        &:last-child{
+            border: 0;
+        }
+    }
+    // 客服电话
+    .serve_tel{
+        height: $h;
+        background-color: #fff;
+        text-align: center;
+        font-size: 30px;
+        color: #ffb000;
+        line-height: $h;
+    }
+    // 服务时间
+    .serve_time{
+        text-align: center;
+        font-size: 26px;
+        color: #a7a7a7;
+        line-height: $h;
+    }
+}
+
+// 加载中
+.loading{
+    font-size: 26px;
+    text-align: center;
+    line-height: 80px;
+    letter-spacing: 2px;
+    color: $font-tint-color;
+}
+/* 内容 */
